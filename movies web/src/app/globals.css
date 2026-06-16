@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-burgundy: #5C0A1E;
+  --color-burgundy-light: #7A1A35;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8D48B;
+  --color-gold-pale: #FFF8E1;
+  --color-velvet: #2C0A14;
+  --color-velvet-light: #3D1822;
+  --color-parchment: #F5E6CA;
+  --color-parchment-dark: #E8D5A8;
+  --color-cream: #FFFDD0;
+  --color-charcoal: #1A1410;
+  --color-mahogany: #3E2723;
+  --color-bronze: #8B6F47;
+
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Cormorant Garamond', 'Garamond', serif;
+  --font-cinzel: 'Cinzel', serif;
+
+  --animate-fade-in: fade-in 0.8s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-glow: glow 3s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 168, 76, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(201, 168, 76, 0.4); }
+}
+
+@utility animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+:root {
+  --color-bg: #1A1410;
+  --color-surface: #2C0A14;
+  --color-surface-alt: #3D1822;
+  --color-text: #F5E6CA;
+  --color-text-muted: #C4A882;
+  --color-accent: #C9A84C;
+  --color-accent-light: #E8D48B;
+  --color-border: #5C3A1E;
+}
+
+body {
+  background-color: #1A1410;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(92, 10, 30, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 100%, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+  color: #F5E6CA;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.3);
+  color: #FFFDD0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1410;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7A1A35, #5C3A1E);
+  border-radius: 4px;
+}
